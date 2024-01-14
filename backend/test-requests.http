@@ -1,0 +1,93 @@
+### CREATE five documents.
+POST http://localhost:3000/players HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Stephen Curry",
+    "team": "Warriors",
+    "height": "5",
+    "pointsPerGame": "5",
+    "yearJoined" : "06-25-23"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/players HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Tyrese Haliburton",
+    "team": "Pacers",
+    "height" : 180,
+    "pointsPerGame": "20",
+    "rosteredSince" : "10/15/23"
+}
+
+### CREATE 3
+POST http://localhost:3000/players HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Deanthony Melton",
+    "team": "76ers",
+    "height" : 210,
+    "pointsPerGame": "10",
+    "rosteredSince" : "11/17/23"
+}
+
+### CREATE 4
+POST http://localhost:3000/players HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Woody Harrison",
+    "team": "bengals",
+    "height" : 100,
+    "pointsPerGame": "0",
+    "rosteredSince" : "1/5/23"
+}
+
+### CREATE 4
+POST http://localhost:3000/players HTTP/1.1
+content-type: application/json
+
+{
+    "name": "John Smith",
+    "team": "Neo",
+    "height" : 150,
+    "pointsPerGame": "5",
+    "rosteredSince" : "5/5/23"
+}
+
+### RETRIEVE all documents.
+GET http://localhost:3000/players HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/players/65583117693230277ca4cde2 HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the year:
+PUT http://localhost:3000/players/655b89fd105923168153e028 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Stephen Curry",
+    "team": "Larriors",
+    "height": "180",
+    "pointsPerGame": "50",
+    "yearJoined" : "11/15/60"
+}
+
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/players/655abca95c5f3f0501ce2846 HTTP/1.1
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/players HTTP/1.1
+

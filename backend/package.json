@@ -1,0 +1,21 @@
+{
+  "name": "web-dev-portfolio-backend",
+  "version": "2023",
+  "description": "Backend for a fantasy basketball team roster",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon fantasyBball-controller.mjs"
+  },
+  "author": "Mike Meller",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1",
+    "rest": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

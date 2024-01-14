@@ -1,0 +1,411 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+  @import-normalize;
+  @import "~react-image-gallery/styles/css/image-gallery.css";
+
+/*   ----- Variables  -----  */
+:root {
+    --blue: rgb(157, 175, 216);
+    --lightblue: rgb(195, 208, 227);
+    --lightbluet: rgba(195, 208, 227, 0.92);
+    --gold: rgb(191, 162, 75);
+    --goldt: rgba(191, 162, 75, 0.92);
+    --tant: rgba(166, 155, 123, 0.7);
+    --brown: rgba(64, 24, 1);
+
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {}. */
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size:1.2em;
+    line-height:1.3;
+    color: var(--brown);
+    
+    margin: 0 auto;
+    padding: 0%;
+    max-width: 70%;
+    overflow-wrap: break-word;
+
+    background-attachment: fixed;
+    background-image: url(images/background-joshua-tree-cacti.jpg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {
+    background-color: var(--tant);
+    text-align: center;
+    padding: 1%;
+  }
+
+  header img{
+    /* border: 1px solid var(--lightbluet); */
+    padding: 0;
+    margin: 0;
+  }
+
+  main {
+    background-color: var(--lightbluet);
+    padding: 5%;
+    border: 5px solid var(--gold);
+  }
+  section {}
+  article {
+    border-top: 4px solid var(--gold);
+}
+
+    #topic1 {}
+    #topic2 {}
+  div {}
+  aside {}
+  .floating{
+    float:right;
+    margin: 1% 1% 2% 2%;
+    padding: 1%;
+    border: 5px solid var(--gold)
+  }
+  footer {
+    background-color: var(--tant);
+    color: var(--lightblue);
+    text-align: center;
+    padding: 1%;
+  }
+  
+  /* ----- Anchors ----- Text links */
+  a {}
+  a:link {
+    color: var(--brown);
+  }
+  a:hover {
+    color: var(--tant);
+  }
+  a:active {}
+  a:visited {}
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: inherit;
+  }
+  nav a {
+    font-family:'Roboto', sans-serif;
+    font-weight: 900;
+    color: var(--brown);
+    text-decoration:none;
+    padding: 2%;
+    margin: 2%;
+    border: 5px solid var(--gold);
+    background-color: var(--goldt);
+  }
+  nav a:hover {
+    color: var(--gold);
+    background-color: var(--brown);
+  }
+
+  nav a:active{
+    color:red;
+  }
+
+nav.local {
+    padding: 0%;
+    margin: -10px 0 20px 0;
+}
+
+nav.local a{
+    border: 1px solid var(--brown);
+    background-color: var(--blue);
+    color: var(--brown);
+    font-weight: bold;
+    padding: 1.5%;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+nav.local a:hover {
+    background-color: var(--brown);
+    color: var(--blue);
+  }
+
+nav.local a:active{
+    color: red;
+}
+  
+  /*  -----  Typography  ----- */
+  p {}
+  #success{
+    color: green;
+  }
+  #failure{
+    color: red;
+  }
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family:'Roboto', sans-serif;
+    font-weight: 900;
+  } 
+  h1 {}
+  h2 {color: var(--gold);}
+  h3 {}
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    font-family: inherit;
+    border-collapse:collapse;
+    border: 1px solid var(--brown);
+    margin: auto;
+    background-color: var(--blue);
+    width: 100%;
+    table-layout: fixed;
+  }
+  td > img {
+    height: 100px;
+    border: 1px solid var(--brown);
+  }
+  .thumb{text-align: center;}
+  .names{text-align: center;}
+  .phones{text-align: center;}
+  .cities{text-align: center;}
+  caption {
+    padding: 1%;
+    background-color: var(--tant);
+    width: 98%;
+  }
+  thead {}
+  tbody {}
+  tfoot {}
+  tr {
+    border-bottom:1px solid var(--brown);
+  }
+    tr:nth-child(even) {}
+  th {
+    padding: 1%;
+  }
+
+  .reactOrderRow > th:nth-child(1) {text-align: center;}
+  .reactOrderRow > th:nth-child(2) {text-align: center;}
+  .reactOrderRow > th:nth-child(3) {text-align: center;}
+  .reactOrderRow > th:nth-child(4) {text-align: center;}
+  td {
+    border-bottom:1px solid var(--brown);
+    padding: 1% 2%;
+  }
+  .playertable > td {
+    text-align:center;
+  }
+  .reactOrderRow > td:nth-child(1) {text-align: center;}
+  .reactOrderRow > td:nth-child(2) {text-align: center;}
+  .reactOrderRow > td:nth-child(3) {text-align: center;}
+  .reactOrderRow > td:nth-child(4) {text-align: center;}
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  .image-gallery-icon{
+    width: revert;
+  }
+  form {
+    display:flex;
+    flex-flow:wrap;
+  }
+  form, label, fieldset > p{
+    width:100%;
+    /* display:flex; */
+  }
+  fieldset > p{
+    margin-top: auto;
+  }
+  .textbox{
+    width: 98%;
+    max-width: 300px;
+  }
+  form, button, input, select, textarea {
+    font-family:inherit;
+    font-size:105%;
+    margin: 0.5%;
+    padding: 0.5%;
+    width: 70%;
+    border-radius: 4px;
+    }
+  fieldset {
+    display: inline-block;
+    border-radius: 4px;
+    border:4px solid var(--tant);
+    padding: 1%;
+    width: 46%;
+    min-width: 210px;
+   }
+   .reactOrder {
+    width: revert;
+   }
+   .radioOrCheck{
+    width: revert;
+   }
+    legend {
+      font-size: 105%;
+      font-weight:bold;
+    }
+  label {
+    display:block;
+    margin-top: 1%;
+  }
+  button {
+    background-color: var(--gold);
+  }
+  .LinkButton{
+    max-width: 15%;
+  }
+  input {
+    padding: 0.5%;
+  }
+  select {
+    padding: 0.5%;
+  }
+    optgroup {}
+    option {}
+  textarea {
+    width: 98%;
+    max-width: 500px;
+    height: 150px;
+  }
+  output {}
+  meter {}
+  progress {}
+  label.required:after { 
+    content:" *"; color:red; 
+  } 
+  :focus{
+    background-color:var(--blue)
+  }
+  input:invalid {
+    border:2px solid rgb(247, 36, 36);
+  }
+  input:valid {
+    border:2px solid rgb(0, 255, 0);
+  }
+  input:checked {
+    border: none;
+    outline: 1px solid rgb(0, 255, 0);
+  }
+
+
+  /* ----- Media ----- */
+  figure {}
+    figcaption {}
+    figure img {}
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  .gallery { 
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin:0; 
+    padding:0;
+  }
+  
+  .gallery figure {
+    width: 500px;
+    margin:1%;
+    padding:1%;
+    border: thick double var(--brown);
+  }
+
+  .gallery figcaption {
+    font-weight: 800;
+    display:block; 
+    padding: 1% 1% 2% 1%;
+  }
+  .gallery img  {
+      width:100%;
+      margin:0;
+      padding:0;
+  }
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
+  
